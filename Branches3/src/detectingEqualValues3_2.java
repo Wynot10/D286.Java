@@ -36,5 +36,27 @@ public class detectingEqualValues3_2 {
         else {
             System.out.println(userNum + " is odd.");
         }
+
+        // Anniversaries
+        int numYears2;
+
+        System.out.print("Enter number years married: ");
+        numYears2 = scnr.nextInt();
+
+        if (numYears2 == 1) {
+            System.out.println("Your first year -- great!");
+        }
+        else if (numYears2 == 10) {
+            System.out.println("A whole decade -- impressive.");
+        }
+        else if (numYears2 == 25) {
+            System.out.println("Your silver anniversary -- enjoy.");
+        }
+        else if (numYears2 == 50) {
+            System.out.println("Your golden anniversary -- amazing.");
+        }
+        else {
+            System.out.println("Nothing special.");
+        }
     }
 }
