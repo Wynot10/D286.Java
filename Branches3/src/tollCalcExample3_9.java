@@ -2,14 +2,15 @@ import java.util.Scanner;
 public class tollCalcExample3_9 {
     public static void main(String[] args) {
       Scanner scnr = new Scanner(System.in);
-      int timeHour; // Time of travel hour (24 hour format)
-      int timeMinute; // Time of travel minute
-      int typeOfDay; // 0 - weekday, 1 - weekend/holiday
-      int inputColon; // Used to read time format
-      String userInput; // User specified time
-      double tollAmount;
+        int timeHour;      // Time of travel hour (24 hour format)
+        int timeMinute;    // Time of travel minute
+        int typeOfDay;     // 0 - weekday, 1 - weekend/holiday
+        int numPeople;    // People in vehicle
+        int inputColon;    // Used to read time format
+        String userInput;  // User specified time
+        double tollAmount;
 
-      System.out.print("Enter time of travel (HH:MM in 24 hour format): ");
+        System.out.print("Enter time of travel (HH:MM in 24 hour format): ");
 
         // Read an integer (hour), colon (char), and integer (minute)
         // with built-in string operators (discussed elsewhere)
@@ -20,6 +21,9 @@ public class tollCalcExample3_9 {
 
         System.out.print("Enter type of day (0 - weekday, 1 - weekend/holiday): ");
         typeOfDay = scnr.nextInt();
+
+        System.out.print("Enter number of people in vehicle: ");
+        numPeople = scnr.nextInt();
 
         if (typeOfDay == 0) { // Weekday time and rates
             // Determine toll based on hour of travel
@@ -47,7 +51,7 @@ public class tollCalcExample3_9 {
             else if (timeHour < 16) {   // 12 pm to 3:59 pm
                 tollAmount = 3.45;
             }
-            else if (timeHour < 19) {   // 4 pm to 6:5 9pm
+            else if (timeHour < 19) {   // 4 pm to 6:59 pm
                 tollAmount = 3.60;
             }
             else if (timeHour < 22) {   // 7 pm to 9:59 pm
@@ -55,6 +59,18 @@ public class tollCalcExample3_9 {
             }
             else {                      // 10 pm and after
                 tollAmount = 1.55;
+            }
+        }
+
+        // Check for carpool rate (3 or more people) and update toll
+        if (numPeople >= 3) {
+            // If on a weekday between 6:00 am and 9:59 am, toll is half off
+            if ((typeOfDay == 0) && (timeHour >= 6) && (timeHour < 10)) {
+                tollAmount = tollAmount * 0.5;
+            }
+            // Otherwise, the toll is free
+            else {
+                tollAmount = 0.0;
             }
         }
 
