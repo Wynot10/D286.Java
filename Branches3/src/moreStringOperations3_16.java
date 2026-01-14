@@ -6,6 +6,7 @@ public class moreStringOperations3_16 {
         int atSymbol;
         String userName = "";
         boolean userNameIsValid = false;
+        String myString = "Good bye";
 
         System.out.println("Enter your email address: ");
         emailTxt = scnr.nextLine();
@@ -23,5 +24,8 @@ public class moreStringOperations3_16 {
             System.out.print("Username is: ");
             System.out.println(userName);
         }
+
+        myString = myString.replace("bye", "evening");
+        System.out.print(myString);
     }
 }
