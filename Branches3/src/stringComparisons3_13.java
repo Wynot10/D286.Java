@@ -18,6 +18,7 @@ public class stringComparisons3_13 {
             System.out.println("Strings are different");
         }
 
+        // Compares strings while ignoring case sensitivity
         if (firstString.equalsIgnoreCase(secondString)) {
             System.out.println("Strings are the same but are not case sensitive");
 
