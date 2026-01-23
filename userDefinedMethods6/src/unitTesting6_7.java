@@ -11,6 +11,11 @@ public class unitTesting6_7 {
     public static void main(String[] args) {
         System.out.println("Testing started");
 
+        /*
+        Turn on VM assertion by going to run || edit configurations || modify options ||
+        add vm options || -ea in the vm box
+         */
+
         assert (hrMinToMin(0, 0) == 0) : "Assertion (hrMinToMin(0, 0) == 0) failed";
         assert (hrMinToMin(0, 1) == 1) : "Assertion (hrMinToMin(0, 1) == 1) failed";
         assert (hrMinToMin(0, 99) == 99) : "Assertion (hrMinToMin(0, 99) == 99) failed";
