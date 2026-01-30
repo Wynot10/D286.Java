@@ -1,7 +1,7 @@
 public class MyCars {
     public static void main(String[] args) {
-        Cars car1 = new Cars(); // Calling the constructor
-        Cars car2 = new Cars(2020 ); // Calling defined 1 argument constructor
+        Cars car1 = new Cars(); // Calling the constructor creating cars object
+        Cars car2 = new Cars(2020 ); // Calling defined 1 argument constructor creating cars object
 
         System.out.println("Default Cars Values Printed ");
         System.out.println(car1.printCars());
