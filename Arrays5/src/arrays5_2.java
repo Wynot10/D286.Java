@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class arrays5_2 {
     public static void main(String[] args) {
@@ -17,5 +18,10 @@ public class arrays5_2 {
             System.out.print(userVals[i] + " ");
         }
         System.out.println();
+
+        // Not from Zybooks
+        int [] newArr = {2, 9, 3, 7, 1};
+        Arrays.sort(newArr);
+        System.out.println("Sorted Array: " + Arrays.toString(newArr));
     }
 }
